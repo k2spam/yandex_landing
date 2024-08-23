@@ -1,0 +1,334 @@
+/* ----------------- */
+/* Root grid section */
+html, 
+body {
+    height: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+        "head head head"
+        "body body body"
+        "foot foot foot";
+}
+header {
+    grid-area: head;
+}
+main {
+    grid-area: body;
+}
+footer {
+    grid-area: foot;
+}
+
+
+
+/* ------------------ */
+/* Animations section */
+@keyframes header-circle {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+
+/* --------------- */
+/* Big buttons section */
+.button {
+    display: inline-block;
+    width: 263px;
+    height: 72px;
+    padding: 12px 0;
+    border: 2px solid rgba(31, 31, 31, 1);
+    border-radius: 66px;
+    text-decoration: none;
+    text-align: center;
+    box-sizing: border-box;
+    vertical-align: middle;
+    transition: all 0.3s;
+}
+.button span {
+    display: inline-block;
+    width: 165px;
+    font: 500 16px/21px "Golos Text";
+}
+.button.button_black {
+    background-color: rgba(31, 31, 31, 1);
+    color: #ffffff;
+}
+.button.button_black:hover {
+    background-color: rgba(251, 206, 81, 1);
+    color: rgba(31, 31, 31, 1);
+    border-color: rgba(251, 206, 81, 1);
+}
+.button.button_white {
+    color: rgba(31, 31, 31, 1);
+}
+.button.button_white:hover {
+    background-color: rgba(31, 31, 31, 1);
+    color: #ffffff;
+    border-color: rgba(31, 31, 31, 1);
+}
+
+
+
+/* -------------- */
+/* Header section */
+.header-outer {
+    position: relative;
+    height: 700px;
+    background-image: url('images/header/stone.png');
+    background-position: 50%;
+    overflow: hidden;
+}
+.header-filter {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(233, 222, 212, 0.7);
+}
+.header-inner-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 26px 72px;
+    box-sizing: border-box;
+}
+.header-circle {
+    z-index: 2;
+    position: absolute;
+    top: -7%;
+    left: 48%;
+    width: 660px;
+    height: 660px;
+    background-color: rgb(248, 194, 48);
+    background-image: url('images/header/circle.png');
+    background-repeat: no-repeat;
+    background-size: 118%;
+    background-position: 50%;
+    border-radius: 50%;
+    opacity: 0.75;
+    animation: header-circle 120s linear infinite;
+}
+.header-figure-f1 {
+    z-index: 5;
+    position: absolute;
+    left: 90.5%;
+    bottom: 17px;
+}
+.header-city {
+    z-index: 4;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/header/city.png');
+    background-repeat: no-repeat;
+    background-position: 48% 100% ;
+}
+.header-content {
+    max-width: 550px;
+    z-index: 5;
+    position: relative;
+}
+.header-content img {
+    margin: 0 0 62px 0;
+}
+.header-content h1 {
+    padding: 0;
+    margin: 0;
+    font: 400 60px/66px 'Merriweather';
+    text-transform: uppercase;
+    color: rgba(49, 49, 49, 1);
+}
+.header-content h1:nth-child(3) {
+    text-align: center;
+}
+.header-content p {
+    width: 90%;
+    margin: 24px 0 0 0;
+    padding: 0;
+    text-align: center;
+    font: 400 18px/24px "Golos Text";
+    color: rgba(49, 49, 49, 1);
+}
+.header-content div {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0 0 0;
+}
+
+
+
+/* -------------------- */
+/* Marquee line section */
+.marquee {
+    overflow: hidden;
+    width: 100%;
+    height: 60px;
+    box-sizing: border-box;
+    white-space: nowrap;
+    background-color: rgba(245, 73, 50, 1);
+}
+.marquee-inner {
+    display: inline-block;
+    padding: 18px;
+    font: 400 22px/24px "Merriweather";
+    color: #ffffff;
+    text-transform: uppercase;
+    animation: marquee 30s linear infinite;
+}
+
+
+
+/* ------------ */
+/* Main section */
+.main {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 72px;
+    box-sizing: border-box;
+}
+
+
+
+/* ---------------- */
+/* H2 title section */
+.h2-title {
+    font: 700 36px/48px "Merriweather";
+    text-transform: uppercase;
+    color: rgba(49, 49, 49, 1);
+}
+.h2-title span {
+    display: block;
+    color: rgba(245, 73, 50, 1);
+}
+.h2-title i {
+    font-style: normal;
+    color: rgba(245, 73, 50, 1);
+}
+
+
+
+/* -------------- */
+/* Dashed section */
+.through {
+    display: inline-block;
+    position: relative;
+    text-decoration: line-through rgba(245, 73, 50, 1);
+}
+
+
+
+/* -------------------- */
+/* Figure block section */
+.figure-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 80px 0 64px;
+}
+.figure-section h2 {
+    max-width: 764px;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* ------------------- */
+/* Table block section */
+.table-section {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 60px 0 200px;
+}
+.table-section figure {
+    flex: 0 0 474px;
+    margin: -35px 25px 0 -25px;
+}
+.table-section img {
+    width: 100%;
+}
+.table-section h2 {
+    max-width: 764px;
+    margin: 0 0 45px;
+}
+.table-section table {
+    width: 100%;
+    margin: 45px 0 48px;
+}
+.table-section table th {
+    width: 47%;
+    padding: 14px 0;
+    font: 400 20px/24px "Golos Text";
+    color: rgba(49, 49, 49, 1);
+    text-align: left;
+    border-right: 2px solid rgba(208, 208, 208, 1);
+    border-bottom: 2px solid rgba(208, 208, 208, 1);
+}
+.table-section table td {
+    padding: 14px 0 14px 16px;
+    font: 600 20px/24px "Golos Text";
+    color: rgba(49, 49, 49, 1);
+    border-bottom: 2px solid rgba(208, 208, 208, 1);
+}
+.table-section table tr:first-child th,
+.table-section table tr:first-child td {
+    padding-top: 0;
+}
+.table-section table tr:last-child th,
+.table-section table tr:last-child td {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+.table-section p {
+    margin: 48px 0 0 0;
+    padding: 0;
+    font: 400 20px/24px "Golos Text";
+    color: rgba(48, 87, 162, 1);
+}
+
+
+
+/* -------------- */
+/* Footer section */
+.footer {
+    background-color: rgba(233, 222, 212, 1);
+}
+.footer-inner {
+    display: flex;
+    align-items: center;
+    max-width: 1920px;
+    height: 150px;
+    margin: 0 auto;
+    padding: 0 72px;
+    box-sizing: border-box;
+    font: 400 16px/20px "Golos Text";
+    color: rgba(49, 49, 49, 1);
+}
