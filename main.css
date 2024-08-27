@@ -15,6 +15,7 @@ body {
         "head head head"
         "body body body"
         "foot foot foot";
+    overflow-x: hidden;
 }
 header {
     grid-area: head;
@@ -106,6 +107,33 @@ footer {
 }
 
 
+
+/* ---------------------- */
+/* Circle buttons section */
+.circle-button {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    color: #ffffff;
+    border-radius: 50%;
+    text-decoration: none;
+    text-align: center;
+    font-size: 25px;
+    vertical-align: middle;
+    background-color: rgba(49, 49, 49, 1);
+    box-sizing: border-box;
+    cursor: pointer;
+    user-select: none;
+    outline: none;
+    border: none;
+}
+.circle-button:hover {
+    background-color: rgba(251, 206, 81, 1);
+}
+.circle-button:disabled {
+    background-color: rgba(214, 214, 214, 1);
+}
 
 /* -------------- */
 /* Header section */
@@ -435,6 +463,75 @@ footer {
     animation: plane 10s ease-in infinite;
 }
 
+
+
+/* ---------------- */
+/* Carousel section */
+.carousel-section {
+    margin: 64px 0 140px;
+}
+.carousel-section-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.carousel-section-title {
+    margin: 0;
+    padding: 0;
+    font: 400 54px/64px "Merriweather";
+}
+.carousel-section-page {
+    display: inline-block;
+    margin: 0 10px;
+    font: 400 16px/19px "Golos Text";
+}
+.carousel {
+    overflow: hidden;
+    padding-top: 60px;
+}
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.carousel-item {
+    flex: 0 0 33.33%;
+    text-align: center;
+}
+.carousel-item-image-wrap {
+    overflow: none;
+    width: 100%;
+    max-width: 320px;
+    max-height: 320px;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+.carousel-item-image {
+    min-width: 100%;
+    min-height: 100%;
+}
+.carousel-item h4 {
+    margin: 28px 0 6px;
+    padding: 0;
+    font: 600 24px/29px "Golos Text";
+    text-align: center;
+    color: rgba(49, 49, 49, 1);
+}
+.carousel-item p {
+    margin: 0 0 20px;
+    padding: 0;
+    text-align: center;
+    font: 400 20px/24px "Golos Text";
+    color: rgba(49, 49, 49, 1);
+}
+.carousel-item a {
+    display: inline-block;
+    padding: 12px;
+    font: 500 16px/19px "Golos Text";
+    color: rgba(48, 87, 162, 1);
+    text-decoration: none;
+    border: 1px solid rgba(48, 87, 162, 1);
+    border-radius: 62px;
+}
 
 
 /* -------------- */
